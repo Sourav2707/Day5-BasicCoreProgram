@@ -11,19 +11,25 @@ namespace BasicCoreProgram
         public void Core(int n)
 
         {
-            int limit = 31, num = 0;
-            if (n <= limit)
+            
+            double harm = 0;
+            if (n > 0)
             {
-                while (num <= n)
+                for (int i = 1; i <= n; i++)
                 {
-                    double power = Math.Pow(2, num);
-                    Console.WriteLine(power);
-                    num++;
+                    harm = harm + (1.0 / i);
+                    if (i == n)
+                    {
+                        Console.Write($"1/{i}");
+                        break;
+                    }
+                    Console.Write($"1/{i}+");
                 }
+                Console.WriteLine($"\nThe value of {n}th harmonic number is {harm}");
             }
             else
             {
-                Console.WriteLine($"Invalid input, limit is {limit}");
+                Console.WriteLine("Invalid input, n shouldn't be negative");
             }
         }
     }
