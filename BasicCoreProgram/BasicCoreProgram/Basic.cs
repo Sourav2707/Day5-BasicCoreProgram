@@ -10,18 +10,15 @@ namespace BasicCoreProgram
     {
         public void Core()
         {
-            Console.WriteLine("Enter two numbers to find remainder and quotient");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            if ((a > 0) && (b > 0))
-            {
-                Console.WriteLine($"The quotient is {a/b}");
-                Console.WriteLine($"The remainder is {a % b}");
-            }
-            else
-            {
-                Console.WriteLine("Invalud input, negative integers are not allowed");
-            }
+            int a, b, c = 0;
+            Console.WriteLine("Enter two numbers to swap");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a;
+            a = b;
+            b = c;
+            Console.WriteLine($"{a}\n{b}");
+
         }
     }
 }
