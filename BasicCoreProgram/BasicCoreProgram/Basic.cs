@@ -10,17 +10,17 @@ namespace BasicCoreProgram
     {
         public void Core()
         {
-            Console.WriteLine("Enter a numbers to check odd or even");
-            int a = Convert.ToInt32(Console.ReadLine());
-            if (a % 2 == 0)
+            Console.WriteLine("Enter a letter to check whether it is vowel");
+            char n = Convert.ToChar(Console.ReadLine());
+            n = char.ToUpper(n);
+            if (n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
             {
-                Console.WriteLine($"The number {a} is even");
+                Console.WriteLine($"The letter {n} is a vowel");
             }
             else
             {
-                Console.WriteLine($"The number {a} is odd");
+                Console.WriteLine($"The letter {n} is a consonant");
             }
-
         }
     }
 }
