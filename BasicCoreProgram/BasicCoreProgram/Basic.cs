@@ -10,17 +10,23 @@ namespace BasicCoreProgram
     {
         public void Core()
         {
-            Console.WriteLine("Enter a letter to check whether it is vowel");
-            char n = Convert.ToChar(Console.ReadLine());
-            n = char.ToUpper(n);
-            if (n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
+            Console.WriteLine("Enter three numbers");
+            int a = Convert.ToInt32(Console.ReadLine()); 
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            if((a > b) && (a > c))
             {
-                Console.WriteLine($"The letter {n} is a vowel");
+                Console.WriteLine($"a={a} is the largest number among three");
+            }
+            else if((b > c) && (b > a))
+            {
+                Console.WriteLine($"b={b} is the largest number among three");
             }
             else
             {
-                Console.WriteLine($"The letter {n} is a consonant");
+                Console.WriteLine($"c={c} is the largest number among three");
             }
+            
         }
     }
 }
