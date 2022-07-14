@@ -8,28 +8,39 @@ namespace BasicCoreProgram
 {
     public class Basic
     {
-        public void Core(int n)
-
+        public void Core()
         {
-            
-            double harm = 0;
+            int y = 0;
+            int n = Convert.ToInt32(Console.ReadLine());
             if (n > 0)
             {
-                for (int i = 1; i <= n; i++)
+                for (int i = 2; i < n; i++)            //factors are only from 2 to the half of the number
                 {
-                    harm = harm + (1.0 / i);
-                    if (i == n)
+                    if (n % i == 0)
                     {
-                        Console.Write($"1/{i}");
-                        break;
+                        int x = 0;
+                        for(int j = 1; j <= i; j++)
+                        {
+                            if (i % j == 0)
+                            {
+                                x++;
+                            }
+                        }
+                        if(x == 2)
+                        {
+                            y = 1;
+                            Console.WriteLine(i + " ");
+                        }
                     }
-                    Console.Write($"1/{i}+");
                 }
-                Console.WriteLine($"\nThe value of {n}th harmonic number is {harm}");
+                if(y == 0)
+                {
+                    Console.WriteLine($"There is no prime factor for {n}");
+                }
             }
             else
             {
-                Console.WriteLine("Invalid input, n shouldn't be negative");
+                Console.WriteLine("Invalud input, negative integers are not allowed");
             }
         }
     }
