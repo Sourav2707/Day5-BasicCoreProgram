@@ -10,14 +10,16 @@ namespace BasicCoreProgram
     {
         public void Core()
         {
-            int a, b, c = 0;
-            Console.WriteLine("Enter two numbers to swap");
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            c = a;
-            a = b;
-            b = c;
-            Console.WriteLine($"{a}\n{b}");
+            Console.WriteLine("Enter a numbers to check odd or even");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if (a % 2 == 0)
+            {
+                Console.WriteLine($"The number {a} is even");
+            }
+            else
+            {
+                Console.WriteLine($"The number {a} is odd");
+            }
 
         }
     }
